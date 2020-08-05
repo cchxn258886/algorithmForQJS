@@ -1,0 +1,22 @@
+func main(){
+	var a = []float64{1,2,3}
+	result := solutionQJS(3,a,2)
+	fmt.Println(result)
+
+}
+
+func solutionQJS(n float64,a []float64,x float64) float64 {
+	var result float64
+	for i:=n;i > 0;i--{
+		result = a[int(i)-1] + x * result
+	}
+	return result
+}
+
+func solution(i float64,a []float64,x float64) float64{
+	var result float64
+	for k,v := range a{
+		result += v * math.Pow(x,float64(k))
+	}
+	return result
+}
